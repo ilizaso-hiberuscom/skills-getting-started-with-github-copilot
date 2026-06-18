@@ -91,16 +91,60 @@ section h3 {
 
 .participants-list {
   margin: 0;
-  padding-left: 20px;
+  padding: 0;
+  list-style: none;
 }
 
-.participants-list li {
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   margin-bottom: 6px;
-  color: #1d3557;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.participants-list li:last-child {
+.participant-item:last-child {
   margin-bottom: 0;
+}
+
+.participant-email {
+  color: #1d3557;
+  overflow-wrap: anywhere;
+}
+
+.participant-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #f2b8b5;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #b42318;
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.participant-delete:hover {
+  background-color: #ffeceb;
+  border-color: #e79b96;
+  transform: translateY(-1px);
+}
+
+.participant-delete:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
+}
+
+.participant-delete svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .participants-empty {
